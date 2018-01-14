@@ -1,0 +1,19 @@
+﻿<Window x:Class="RxTimerSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RxTimerSample"
+        xmlns:vm="clr-namespace:RxTimerSample.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        DataContext="{x:Static Member=vm:MainWindowViewModel.Instance}"
+        >
+    <StackPanel>
+        <TextBlock Text="{Binding Status}"></TextBlock>
+        <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
+            <Button Command="{Binding StartCommand}">Start</Button>
+            <Button Command="{Binding StopCommand}">Stop</Button>
+        </StackPanel>
+    </StackPanel>
+</Window>
